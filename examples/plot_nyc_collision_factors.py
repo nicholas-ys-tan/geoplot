@@ -28,7 +28,7 @@ gplt.kdeplot(
     ],
     cmap='Reds',
     projection=proj,
-    shade=True, thresh=0.05,
+    fill=True, thresh=0.05,
     clip=nyc_boroughs.geometry,
     ax=ax1
 )
@@ -41,7 +41,7 @@ gplt.kdeplot(
     ],
     cmap='Reds',
     projection=proj,
-    shade=True, thresh=0.05,
+    fill=True, thresh=0.05,
     clip=nyc_boroughs.geometry,
     ax=ax2
 )
