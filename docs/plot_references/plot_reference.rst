@@ -374,7 +374,7 @@ For interpretability, these examples also include world geometry.
 
     ax = gplt.sankey(la_flights, projection=gcrs.Mollweide())
     gplt.polyplot(world, ax=ax, facecolor='lightgray', edgecolor='white')
-    ax.set_global(); ax.outline_patch.set_visible(True)
+    ax.set_global(); ax.spines['geo'].set_visible(True)
 
 ``hue`` adds color gradation to the map. Use ``cmap`` to control the colormap. For a categorical
 colormap, specify ``scheme``. ``legend`` toggles a legend.
@@ -392,7 +392,7 @@ colormap, specify ``scheme``. ``legend`` toggles a legend.
     gplt.polyplot(
         world, ax=ax, facecolor='lightgray', edgecolor='white'
     )
-    ax.set_global(); ax.outline_patch.set_visible(True)
+    ax.set_global(); ax.spines['geo'].set_visible(True)
 
 ``scale`` adds volumetric scaling to the plot. ``limits`` can be used to control the minimum
 and maximum line width.
@@ -411,7 +411,7 @@ and maximum line width.
     gplt.polyplot(
         world, ax=ax, facecolor='lightgray', edgecolor='white'
     )
-    ax.set_global(); ax.outline_patch.set_visible(True)
+    ax.set_global(); ax.spines['geo'].set_visible(True)
 
 Keyword arguments can be passed to the legend using the ``legend_kwargs`` argument. These
 arguments will be passed to the underlying legend.
@@ -431,7 +431,7 @@ arguments will be passed to the underlying legend.
     gplt.polyplot(
         world, ax=ax, facecolor='lightgray', edgecolor='white'
     )
-    ax.set_global(); ax.outline_patch.set_visible(True)
+    ax.set_global(); ax.spines['geo'].set_visible(True)
 
 Voronoi
 -------
