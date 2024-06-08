@@ -882,7 +882,7 @@ def polyplot(df, projection=None, extent=None, figsize=(8, 6), ax=None, **kwargs
             else:
                 for geom in df.geometry:
                     try:  # Duck test for MultiPolygon.
-                        for subgeom in geom:
+                        for subgeom in geom.geoms:
                             feature = GeopandasPolygonPatch(
                                 subgeom, facecolor=facecolor, edgecolor=edgecolor, zorder=zorder,
                                 **kwargs
@@ -979,7 +979,7 @@ def choropleth(
             else:
                 for color, geom in zip(self.colors, df.geometry):
                     try:  # Duck test for MultiPolygon.
-                        for subgeom in geom:
+                        for subgeom in geom.geoms:
                             feature = GeopandasPolygonPatch(
                                 subgeom, facecolor=color, **self.kwargs
                             )
@@ -1230,7 +1230,7 @@ def cartogram(
                     ax.add_feature(features, facecolor=color, **kwargs)
                 else:
                     try:  # Duck test for MultiPolygon.
-                        for subgeom in scaled_polygon:
+                        for subgeom in scaled_polygon.geoms:
                             feature = GeopandasPolygonPatch(
                                 subgeom, facecolor=color, **self.kwargs
                             )
