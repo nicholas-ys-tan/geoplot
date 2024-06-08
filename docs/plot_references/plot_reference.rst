@@ -255,7 +255,7 @@ geometry.
     :context: close-figs
 
     ax = gplt.polyplot(boroughs, projection=gcrs.AlbersEqualArea(), zorder=1)
-    gplt.kdeplot(collisions, cmap='Reds', shade=True, clip=boroughs, ax=ax)
+    gplt.kdeplot(collisions, cmap='Reds', fill=True, clip=boroughs, ax=ax)
 
 Additional keyword arguments that are not part of the ``geoplot`` API are passed to
 `the underlying seaborn.kdeplot instance <https://seaborn.pydata.org/generated/seaborn.kdeplot.html#seaborn.kdeplot>`_.
@@ -266,7 +266,7 @@ lowest (basal) layer of the kernel density estimate.
     :context: close-figs
 
     ax = gplt.polyplot(boroughs, projection=gcrs.AlbersEqualArea(), zorder=1)
-    gplt.kdeplot(collisions, cmap='Reds', shade=True, thresh=0.05,
+    gplt.kdeplot(collisions, cmap='Reds', fill=True, thresh=0.05,
                  clip=boroughs, ax=ax)
 
 Cartogram

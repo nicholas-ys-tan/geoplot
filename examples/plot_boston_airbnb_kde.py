@@ -20,7 +20,7 @@ boston_airbnb_listings = gpd.read_file(gplt.datasets.get_path('boston_airbnb_lis
 
 ax = gplt.kdeplot(
     boston_airbnb_listings, cmap='viridis', projection=gcrs.WebMercator(), figsize=(12, 12),
-    shade=True
+    fill=True
 )
 gplt.pointplot(boston_airbnb_listings, s=1, color='black', ax=ax)
 gplt.webmap(boston_airbnb_listings, ax=ax)
