@@ -1424,7 +1424,7 @@ def sankey(
                 elif isinstance(geom, shapely.geometry.MultiLineString):
                     return geom
                 elif isinstance(geom, shapely.geometry.MultiPoint):
-                    return shapely.geometry.LineString(geom)
+                    return shapely.geometry.LineString(geom.geoms)
                 else:
                     raise ValueError(
                         f'df.geometry must contain LineString, MultiLineString, or MultiPoint '

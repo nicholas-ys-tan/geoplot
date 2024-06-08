@@ -28,21 +28,21 @@ ax = gplt.sankey(
     la_flights, scale='Passengers', hue='Passengers', cmap='Purples', scheme=scheme, ax=axarr[0][0]
 )
 ax.set_global()
-ax.outline_patch.set_visible(True)
+ax.spines['geo'].set_visible(True)
 ax.coastlines()
 
 ax = gplt.sankey(
     la_flights, scale='Passengers', hue='Passengers', cmap='Purples', scheme=scheme, ax=axarr[0][1]
 )
 ax.set_global()
-ax.outline_patch.set_visible(True)
+ax.spines['geo'].set_visible(True)
 ax.stock_img()
 
 ax = gplt.sankey(
     la_flights, scale='Passengers', hue='Passengers', cmap='Purples', scheme=scheme, ax=axarr[1][0]
 )
 ax.set_global()
-ax.outline_patch.set_visible(True)
+ax.spines['geo'].set_visible(True)
 ax.gridlines()
 ax.coastlines()
 ax.add_feature(cartopy.feature.BORDERS)
@@ -51,7 +51,7 @@ ax = gplt.sankey(
     la_flights, scale='Passengers', hue='Passengers', cmap='Purples', scheme=scheme, ax=axarr[1][1]
 )
 ax.set_global()
-ax.outline_patch.set_visible(True)
+ax.spines['geo'].set_visible(True)
 ax.coastlines()
 ax.add_feature(cartopy.feature.LAND)
 ax.add_feature(cartopy.feature.OCEAN)
