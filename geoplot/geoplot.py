@@ -888,7 +888,7 @@ def polyplot(df, projection=None, extent=None, figsize=(8, 6), ax=None, **kwargs
                                 **kwargs
                             )
                             ax.add_patch(feature)
-                    except (TypeError, AssertionError):  # Shapely Polygon.
+                    except (TypeError, AssertionError, AttributeError):  # Shapely Polygon.
                         feature = GeopandasPolygonPatch(
                             geom, facecolor=facecolor, edgecolor=edgecolor, zorder=zorder,
                             **kwargs
@@ -984,7 +984,7 @@ def choropleth(
                                 subgeom, facecolor=color, **self.kwargs
                             )
                             ax.add_patch(feature)
-                    except (TypeError, AssertionError):  # Shapely Polygon.
+                    except (TypeError, AssertionError, AttributeError):  # Shapely Polygon.
                         feature = GeopandasPolygonPatch(
                             geom, facecolor=color, **self.kwargs
                         )
@@ -1235,7 +1235,7 @@ def cartogram(
                                 subgeom, facecolor=color, **self.kwargs
                             )
                             ax.add_patch(feature)
-                    except (TypeError, AssertionError):  # Shapely Polygon.
+                    except (TypeError, AssertionError, AttributeError):  # Shapely Polygon.
                         feature = GeopandasPolygonPatch(
                             scaled_polygon, facecolor=color, **self.kwargs
                         )
